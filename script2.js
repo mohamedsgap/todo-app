@@ -43,7 +43,30 @@ function renderTodo(todo) {
     deleteButton.onclick = removeTodo
     deleteButton.todoRef = todo
 
+    onst checkbox = document.createElement('input')
+  checkbox.className = classNames.TODO_CHECKBOX
+  checkbox.type = 'checkbox'
+  checkbox.checked = todo.checked
+  checkbox.todoRef = todo
+  checkbox.onchange = toggleChecked
 
+  const span = document.createElement('span')
+  span.className = classNames.TODO_TEXT
+  span.setAttribute('contenteditable', 'true')
+  span.innerHTML = todo.name
+
+  const li = document.createElement('li')
+  li.className = classNames.TODO_ITEM
+  li.appendChild(deleteButton)
+  li.appendChild(checkbox)
+  li.appendChild(span)
+
+
+  // keep reference of element on todo for performance
+  todo.element = li
+  todo.checkbox = checkbox
+
+  return li
 }
 
 
