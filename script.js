@@ -41,6 +41,11 @@ function createTodo(name) {
 
 }
 
-function newTodo() {
-  alert('New TODO button clicked!')
+
+function newTodo(name) {
+  const todo = createTodo(name);
+  list.appendChild(todo);
+  updateItemCount(1);
+  updateUncheckedCount(1);
 }
+
