@@ -49,3 +49,10 @@ function newTodo(name) {
   updateUncheckedCount(1);
 }
 
+function toggleCheckbox() {
+  if (this.checked) {
+    updateUncheckedCount(-1)
+  } else {
+    updateUncheckedCount(1)
+  }
+}
