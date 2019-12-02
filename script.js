@@ -28,6 +28,11 @@ function createTodo(name) {
   checkbox.type = 'checkbox';
   checkbox.onchange = toggleCheckbox();
 
+  const span = document.createElement('span');
+  span.className = classNames.TODO_TEXT;
+  span.setAttribute('contenteditable', 'true');
+  span.innerHTML = name || 'ToDO';
+
 
 }
 
