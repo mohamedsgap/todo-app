@@ -84,5 +84,8 @@ function newTodo(){
     return render()
 }
 
-
+function toggleChecked() {
+    this.todoRef.toggleCheck()
+    return render()
+  }
 
