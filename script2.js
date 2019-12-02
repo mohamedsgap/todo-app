@@ -78,5 +78,11 @@ function render() {
 }
 
 
+function newTodo(){
+    const todo = new Todo(name)
+    todos.push(todo)
+    return render()
+}
+
 
 
