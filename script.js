@@ -18,10 +18,18 @@ function updateItemCount(diff) {
 }
 
 function updateUncheckedCount (diff) {
-  uncheckedCount -= diff ;
+  uncheckedCount += diff ;
   uncheckedCountSpan.innerHTML(uncheckedCount);
 }
 
+function createTodo(name) {
+  const checkbox = document.createElement('input');
+  checkbox.className = classNames.TODO_CHECKBOX;
+  checkbox.type = 'checkbox';
+  checkbox.onchange = toggleCheckbox();
+
+
+}
 
 function newTodo() {
   alert('New TODO button clicked!')
