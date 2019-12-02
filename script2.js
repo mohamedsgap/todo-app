@@ -78,7 +78,7 @@ function render() {
 }
 
 
-function newTodo(){
+function newTodo() {
     const todo = new Todo(name)
     todos.push(todo)
     return render()
@@ -87,10 +87,10 @@ function newTodo(){
 function toggleChecked() {
     this.todoRef.toggleCheck()
     return render()
-  }
+}
 
-  function removeTodo() {
+function removeTodo() {
     const todo = this.todoRef
     todos = todos.filter(t => t !== todo)
     return render()
-  }
+}
