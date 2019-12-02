@@ -32,5 +32,18 @@ Todo.prototype.toggleCheck = function () {
     }
 }
 
+function renderTodo(todo) {
+    if (todo.element) return todo.element
+
+
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '&times'
+    deleteButton.className = classNames.DELETE_BUTTON
+    // keep reference of todo on button so that it can be dereferenced in the callback
+    deleteButton.onclick = removeTodo
+    deleteButton.todoRef = todo
+
+
+}
 
 
