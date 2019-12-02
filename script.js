@@ -33,6 +33,11 @@ function createTodo(name) {
   span.setAttribute('contenteditable', 'true');
   span.innerHTML = name || 'ToDO';
 
+  const li = document.createElement('li');
+  li.className = classNames.TODO_ITEM;
+  li.appendChild(checkbox);
+  li.appendChild(span);
+  return li;
 
 }
 
