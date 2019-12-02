@@ -89,3 +89,8 @@ function toggleChecked() {
     return render()
   }
 
+  function removeTodo() {
+    const todo = this.todoRef
+    todos = todos.filter(t => t !== todo)
+    return render()
+  }
