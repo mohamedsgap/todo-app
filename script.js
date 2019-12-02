@@ -9,29 +9,29 @@ const list = document.getElementById('todo-list')
 const itemCountSpan = document.getElementById('item-count')
 const uncheckedCountSpan = document.getElementById('unchecked-count')
 
-let itemCount = 0 ;
+let itemCount = 0;
 let uncheckedCount = 0;
 
 function updateItemCount(diff) {
-  itemCount += diff ;
-  itemCountSpan.innerHTML= itemCount;
+  itemCount += diff;
+  itemCountSpan.innerHTML = itemCount;
 }
 
-function updateUncheckedCount (diff) {
-  uncheckedCount += diff ;
-  uncheckedCountSpan.innerHTML(uncheckedCount);
+function updateUncheckedCount(diff) {
+  uncheckedCount += diff;
+  uncheckedCountSpan.innerHTML = uncheckedCount;
 }
 
 function createTodo(name) {
   const checkbox = document.createElement('input');
   checkbox.className = classNames.TODO_CHECKBOX;
   checkbox.type = 'checkbox';
-  checkbox.onchange = toggleCheckbox();
+  checkbox.onchange = toggleCheckbox
 
   const span = document.createElement('span');
   span.className = classNames.TODO_TEXT;
   span.setAttribute('contenteditable', 'true');
-  span.innerHTML = name || 'ToDO';
+  span.innerHTML = name || 'TODO';
 
   const li = document.createElement('li');
   li.className = classNames.TODO_ITEM;
@@ -40,7 +40,6 @@ function createTodo(name) {
   return li;
 
 }
-
 
 function newTodo(name) {
   const todo = createTodo(name);
