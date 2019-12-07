@@ -10,12 +10,33 @@ const Todo = props => (
     <Button onPress={props.onDelete} title='delete'/>
     <Text>{props.todo.text}</Text>
   </View>
+  )
 
-)
+  export default class App extends React.Component{
+    constructor(props){
+      super(props)
+      this.state =  {
+        todos: [],
+      }
+    }
+    render(){
+      return(
+        <View>
+          
+        </View>
+      )
+    }
+  }
 
 const styles = StyleSheet.create({
   todoContainer: {
     flexDirection: 'row',
     alignItems: 'center',
   },
+  appContainer: {
+    paddingTop: Constants.statusBarHeight,
+  },
+  fill: {
+    flex: 1,
+  }
 });
