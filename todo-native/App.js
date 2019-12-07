@@ -2,19 +2,20 @@ import React from 'react';
 import { StyleSheet, Text, View, Switch, ScrollView, Button } from 'react-native';
 import {Constants} from 'expo'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
+
+let id = 0 ;
+const Todo = props => (
+  <View style={styles.todoContainer}>
+    <Switchh value={props.todo.checked} onValueChange={props.onToggle}/>
+    <Button onPress={props.onDelete} title='delete'/>
+    <Text>{props.todo.text}</Text>
+  </View>
+
+)
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
+  todoContainer: {
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });
